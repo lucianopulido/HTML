@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas en HTML</title>
+
+    <link rel="stylesheet" href="estiloTabla.css">
+</head>
+
+<body>
+    <table>
+        <caption>Listado de Personas</caption><!-- caption: es el titulo de la tabla-->
+        <!-- table:sirve para crear una tabla-->
+        <tr>
+            <!--ejemplo: <th colspan="2">Nombre </th> coldspan: sirve para que un td ocupe 2 td-->
+
+            <!-- tr:sirve para crear una fila-->
+            <th>Nombre</th>
+            <!--th:sirve para crear una columna de cabecera-->
+            <th>Apellido</th>
+            <th>Email</th>
+  
+        </tr>
+        <tr>
+            <td>Luciano</td><!-- td: sirve para agregar datos a las columnas ya creadas con th-->
+            <td>Pulido</td>
+            <td>lucianopulido1996@gmail.com</td>
+            <!--ejemplo:<td rowspan="2">lucianopulido1996@gmail.com</td> rowspan: sirve para que un td ocupe 2 filas-->
+        </tr>
+
+        <tr>
+            <td>Marcelo</td><!-- td: sirve para agregar datos a las columnas ya creadas con th-->
+            <td>Pulido</td>
+            <td>marcelo1996@gmail.com</td>
+        </tr>
+    </table>
+</body>
+
+</html>
