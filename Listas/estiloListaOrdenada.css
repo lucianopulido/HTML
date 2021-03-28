@@ -1,0 +1,17 @@
+ol{
+    list-style: none;
+    counter-reset: contador;
+}
+
+ol li{
+    counter-increment: contador;
+}
+
+ol li::before{ /* con before puedo agregar algo antes del contenido de la lista*/
+content: 'Curso ' counter(contador) ') ';
+color: #ff6f00;
+}
+
+ol li::after{ /* con after puedo agregar algo antes del contenido de la lista*/
+    content: '.';
+}
