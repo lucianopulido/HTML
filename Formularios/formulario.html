@@ -9,38 +9,57 @@
 </head>
 <body>
     <h1>Formularios en HTML</h1>
-    <form method="POST"><!--form: sirve para crear un formulario. method: sirve para especificar la operación de la API REST, por default es un get--> 
-        <label for="nombre">Nombre:</label><br><!--label: sirve para poner una etiueta al input. for: sirve para vincular la etiqueta con el input  y que cuando la toque se posiciones en el input-->
-        <input type="text" id="nombre" placeholder="ingrese su nombre" name="nombre" required="true"/><br> <!--input: sirve para ingresar datos por teclado de distintas maneras-->
-       
-        <label for="apellido">Apellido:</label><br/>
-        <input type="text" id="apellido" placeholder="ingrese su apellido" name="apellido" required="true"/><br/> <!--value: sirve para setear un valor por defecto. placeholder: sirve para indicar lo que se debe ingresar-->
-       
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" placeholder="ingrese su Email" name="email" required="true"/><br/> 
+    <form action="mi_servidor" method="POST"><!--form: sirve para crear un formulario. method: sirve para especificar la operación de la API REST, por default es un get--> 
+<!--action: sirve para saber cual es el componente o clase del lado del servidor que va a procesar la peticion del formulario-->
+        <fieldset><!--fieldset: le pone un marco al formulario-->
 
-        <label for="contraseña">Contraseña:</label><br>
-        <input type="password" id="contraseña" placeholder="ingrese su Contraseña" name="contraseña" required="true"/><br/> 
+            <legend>Datos de la Persona</legend><!--legend: le pone un titulo al formulario-->
+            <label for="nombre">Nombre:</label><br><!--label: sirve para poner una etiueta al input. for: sirve para vincular la etiqueta con el input  y que cuando la toque se posiciones en el input-->
+            <input type="text" id="nombre" placeholder="ingrese su nombre" name="nombre" required="true"/><br> <!--input: sirve para ingresar datos por teclado de distintas maneras-->
+        
+            <label for="apellido">Apellido:</label><br/>
+            <input type="text" id="apellido" placeholder="ingrese su apellido" name="apellido" required="true"/><br/> <!--value: sirve para setear un valor por defecto. placeholder: sirve para indicar lo que se debe ingresar-->
+        
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" placeholder="ingrese su Email" name="email" required="true"/><br/> 
 
-        <label for="edad">Edad:</label><br>
-        <input type="number" id="edad" placeholder="ingrese su edad" name="edad" required="true"/><br/> 
+            <label for="contraseña">Contraseña:</label><br>
+            <input type="password" id="contraseña" placeholder="ingrese su Contraseña" name="contraseña" required="true"/><br/> 
 
-        <label>Genero</label><br/>
-        <input type="radio" id="femenino" name="Genero" value="femenino"/>
-        <label for="femenino">Femenino</label><br/>
+            <label for="edad">Edad:</label><br>
+            <input type="number" id="edad" placeholder="ingrese su edad" name="edad" required="true"/><br/> 
 
-        <input type="radio" id="masculino" name="Genero" value="masculino"/>
-        <label for="masculino">Masculino</label><br/>
+            <label>Genero</label><br/>
+            <input type="radio" id="femenino" name="Genero" value="femenino"/>
+            <label for="femenino">Femenino</label><br/>
 
-        <label>Genero musica favorita</label><br/>
+            <input type="radio" id="masculino" name="Genero" value="masculino"/>
+            <label for="masculino">Masculino</label><br/>
 
-        <input type="checkbox" id="clasica" name="musica" value="clasica">
-        <label for="clasica">Clasica</label><br/>
+            <label>Genero musica favorita</label><br/>
 
-        <input type="checkbox" id="jazz" name="musica" value="jazz">
-        <label for="jazz">Jazz</label><br/>
+            <input type="checkbox" id="clasica" name="musica" value="clasica">
+            <label for="clasica">Clasica</label><br/>
 
-        <input type="submit" value="Enviar"/>
+            <input type="checkbox" id="jazz" name="musica" value="jazz">
+            <label for="jazz">Jazz</label><br/>
+
+            <label for="autos">Marca de auto favorita</label><br/>
+            <select id="autos" name="autos">
+
+                <option value="volvo">Volvo</option>
+                <option value="bmw">BMW</option>
+                <option value="audi">Audi</option>
+
+            </select><br/>
+
+            <label for="comentario">Comentario</label><br/>
+            <textarea id="comentario" name="comentario" rows="2" cols="30">Este es mi comentario</textarea><br/>
+
+            <input type="submit" value="Enviar"/>
+
+        </fieldset>
+
     </form>
 </body>
 </html>
